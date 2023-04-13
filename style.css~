@@ -1,0 +1,266 @@
+ @font-face {
+    font-family: 'Roboto';
+    src: url('fonts/Roboto-Bold.woff2') format('woff2'),
+        url('fonts/Roboto-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/Roboto-Light.woff2') format('woff2'),
+        url('fonts/Roboto-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/Roboto-Regular.woff2') format('woff2'),
+        url('fonts/Roboto-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/Roboto-Thin.woff2') format('woff2'),
+        url('fonts/Roboto-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+section {
+min-height: 500px;
+padding: 76px 0 64px 0;
+}
+
+html {
+	font-family: Roboto, sans-serif;
+}
+
+body {
+	position: relative;
+	padding-top: var(--menu-height);
+}
+
+:root {
+	--grey: #8f8f8f;
+	--light-grey: #f2f2f2;
+	--dark-grey: #262626;
+	--main-color: #fff;
+	--secondary-color: #000;
+	--transparent-black: rgba(0, 0, 0, .64);
+	--menu-height: 46px;
+}
+
+.container {
+	margin: 0 auto;
+	max-width: 1140px;
+	height: 100%;
+	padding: 0 15px;
+	position: relative;
+}
+
+.divider {
+	margin: 0 auto;
+	margin-top: 20px;
+	height: 4px;
+	width: 260px;
+	background-color: var(--grey);
+	border-radius: 5px;
+}
+
+.grid-wrapper {
+  display: flex;
+  justify-content:space-between;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.grid-img, .grid-text {
+width: 50%;
+}
+
+.title {
+	font-size: 39px;
+	text-align: center;
+}
+
+.menu {
+	 position: fixed;
+	 top: 0;
+	 left: 0;
+	 width: 100%;
+	 height: var(--menu-height);
+	 background-color: var(--transparent-black);
+	 backdrop-filter: saturate(140%) blur(24px);
+	 z-index: 999;
+}
+ .menu__links {
+	 display: flex;
+	 justify-content: space-between;
+	 align-items: center;
+	 height: 100%;
+	 font-size: 17px;
+	 font-weight: 300;
+}
+ .menu__link {
+	 list-style-type: none;
+}
+ .menu__link a {
+	 text-decoration: none;
+	 color: var(--light-grey);
+	 position: relative;
+}
+ .menu__link a img {
+	 width: 30px;
+	 height: auto;
+	 filter: brightness(0) invert(1);
+}
+ .menu__link a::before {
+	 content: "";
+	 position: absolute;
+	 left: 0;
+	 width: 0%;
+	 height: 1.5px;
+	 background-color: var(--light-grey);
+	 bottom: -2px;
+	 transition: 0.4s all;
+}
+ .menu__link a::after {
+	 content: "";
+	 position: absolute;
+	 right: 0;
+	 width: 0%;
+	 height: 1.5px;
+	 background-color: var(--light-grey);
+	 bottom: -2px;
+	 transition: 0.4s all;
+}
+ .menu__link a:hover::before, .menu__link a:hover::after {
+	 width: 50%;
+}
+ 
+ .promo {
+	 background: url("img/promo_bg.jpg") center center/cover no-repeat;
+	 backdrop-filter: blur(5px) brightness(0.4);
+	 color: var(--light-grey);
+	 text-align: center;
+}
+ .promo__title {
+	 font-size: 52px;
+	 font-weight: 700;
+	 text-transform: uppercase;
+	 position: relative;
+}
+ .promo__title::before {
+	 content: "";
+	 position: absolute;
+	 background-color: var(--light-grey);
+	 width: 150px;
+	 height: 2px;
+	 top: 50%;
+	 left: 22%;
+	 transform: translate(5%, -50%);
+}
+ .promo__title::after {
+	 content: "";
+	 position: absolute;
+	 background-color: var(--light-grey);
+	 width: 150px;
+	 height: 2px;
+	 top: 50%;
+	 right: 22%;
+	 transform: translate(-5%, -50%);
+}
+ .promo__logo {
+	 display: block;
+	 margin: 0 auto;
+	 margin-top: 20px;
+	 width: 160px;
+}
+ .promo__subtitle {
+	 display: block;
+	 margin: 0 auto;
+	 margin-top: 34px;
+	 font-size: 39px;
+	 font-weight: 700;
+}
+ .promo__text {
+	 font-size: 25px;
+	 font-weight: 300;
+	 margin-top: 20px;
+}
+ .promo__more {
+	 margin-top: 76px;
+}
+ .promo__more__text {
+	 font-size: 19px;
+	 font-weight: 400;
+	 text-transform: uppercase;
+}
+ .promo__more__down {
+	 display: block;
+	 margin: 0 auto;
+	 margin-top: 12px;
+}
+
+.title_black {
+  font-size: 39px;
+  color: #000;
+  text-align: left;
+}
+
+.title_white {
+  font-size: 39px;
+  color: #fff;
+  text-align: right;
+}
+
+.foundation {
+  background-color: #fff;
+  color: #000;
+}
+
+
+
+.prewar {
+background-color: #000;
+color: #fff;
+}
+
+.prewar .grid-text {
+text-align: right;
+}
+
+.postwar {
+background-color: #000}
+
+.postwar .grid-text {
+text-align: right;
+color: №аааж
+}
+
+.footer {
+	 min-height: 200px;
+	 padding: 60px 0 40px 0;
+	 background: linear-gradient(to bottom, #111, #1b1b1b, #111);
+	 color: #888;
+}
+ .footer__creators {
+	 text-align: center;
+	 font-size: 18px;
+	 font-weight: 300;
+}
+ 
